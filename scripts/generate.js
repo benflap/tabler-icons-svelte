@@ -1,12 +1,11 @@
 const fs = require("fs");
 const path = require("path");
-const prettier = require("prettier");
 
 const SOURCE_ICONS_PATH = path.resolve(
     __dirname,
     "../node_modules/tabler-icons/icons"
 );
-const DESTINATION_ICONS_PATH = path.resolve(__dirname, "../src/icons");
+const DESTINATION_ICONS_PATH = path.resolve(__dirname, "../src");
 
 function pascalCase(string) {
     return string
@@ -47,7 +46,6 @@ function removeOldComponents() {
 }
 
 async function generateNewComponents() {
-    // const prettierOptions = (await prettier.resolveConfig(__dirname)) || {};
     const exports = [];
 
     for (const file of findIcons()) {
@@ -89,7 +87,6 @@ async function generateNewComponents() {
 }
 
 async function createTypesFile() {
-    const prettierOptions = (await prettier.resolveConfig(__dirname)) || {};
     const exports = findIcons().map((file) => {
         const [originalName] = file.split(".");
         const componentName = createComponentName(originalName);
@@ -107,5 +104,5 @@ async function createTypesFile() {
 }
 
 removeOldComponents();
-generateNewComponents();
+// generateNewComponents();
 // createTypesFile();

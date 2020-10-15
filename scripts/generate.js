@@ -65,7 +65,6 @@ async function generateNewComponents() {
             svgFileContents
         );
 
-        console.log(getComponentTemplate());
         let source = getComponentTemplate()
             // .replace(/%%COMPONENT_NAME%%/g, componentName)
             // .replace(/%%ORIGINAL_NAME%%/g, originalName)
@@ -83,7 +82,7 @@ async function createIndexFile() {
         const [originalName] = file.split(".");
         const componentName = createComponentName(originalName);
 
-        return `export { defualt as ${componentName} } from "./${componentName}.svelte"`;
+        return `export { default as ${componentName} } from "./${componentName}.svelte"`;
     });
 
     fs.writeFileSync(

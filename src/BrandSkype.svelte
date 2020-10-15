@@ -4,17 +4,17 @@
 </script>
 
 <svg
-     xmlns='http://www.w3.org/2000/svg'
-     className='icon icon-tabler icon-tabler-%%ORIGINAL_NAME%%'
-     width={size}
-     height={size}
-     viewBox='0 0 24 24'
-     stroke={color}
-     strokeWidth='2'
-     fill='none'
-     strokeLinecap='round'
-     strokeLinejoin='round'
-    >
+    xmlns='http://www.w3.org/2000/svg'
+    className='icon icon-tabler icon-tabler-%%ORIGINAL_NAME%%'
+    width={size}
+    height={size}
+    viewBox='0 0 24 24'
+    stroke={color}
+    strokeWidth='2'
+    fill='none'
+    strokeLinecap='round'
+    strokeLinejoin='round'
+>
       
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M12 3a9 9 0 0 1 8.603 11.65a4.5 4.5 0 0 1 -5.953 5.953a9 9 0 0 1 -11.253 -11.253a4.5 4.5 0 0 1 5.953 -5.954a8.987 8.987 0 0 1 2.65 -.396z" />

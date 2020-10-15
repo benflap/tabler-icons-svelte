@@ -72,37 +72,26 @@ async function generateNewComponents() {
             .replace(/%%SVG_CONTENT%%/g, svgContent);
 
         fs.writeFileSync(
-            path.resolve(DESTINATION_ICONS_PATH, `${originalName}.svelte`),
+            path.resolve(DESTINATION_ICONS_PATH, `${componentName}.svelte`),
             source
         );
     }
-
-    // fs.writeFileSync(
-    //     path.resolve(__dirname, "../src/index.js"),
-    //     prettier.format(exports.join("\n"), {
-    //         parser: "babel",
-    //         ...prettierOptions,
-    //     })
-    // );
 }
 
-async function createTypesFile() {
+async function createIndexFile() {
     const exports = findIcons().map((file) => {
         const [originalName] = file.split(".");
         const componentName = createComponentName(originalName);
 
-        return `export const ${componentName}: Icon;`;
+        return `export { defualt as ${componentName} } from "./${componentName}.svelte"`;
     });
 
     fs.writeFileSync(
-        path.resolve(__dirname, "../src/index.d.ts"),
-        prettier.format(getTypesTemplate() + exports.join("\n"), {
-            parser: "babel-ts",
-            ...prettierOptions,
-        })
+        path.resolve(__dirname, "../src/index.js"),
+        exports.join("\n")
     );
 }
 
 removeOldComponents();
-// generateNewComponents();
-// createTypesFile();
+generateNewComponents();
+createIndexFile();

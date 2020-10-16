@@ -57,18 +57,14 @@ async function generateNewComponents() {
 
         const componentName = createComponentName(originalName);
 
-        // exports.push(
-        //     `export { default as ${componentName} } from './icons/${originalName}.js';`
-        // );
-
         const [, svgContent] = /<svg[^>]*>([\s\S]*?)<\/svg>/.exec(
             svgFileContents
         );
 
-        let source = getComponentTemplate()
-            // .replace(/%%COMPONENT_NAME%%/g, componentName)
-            // .replace(/%%ORIGINAL_NAME%%/g, originalName)
-            .replace(/%%SVG_CONTENT%%/g, svgContent);
+        let source = getComponentTemplate().replace(
+            /%%SVG_CONTENT%%/g,
+            svgContent
+        );
 
         fs.writeFileSync(
             path.resolve(DESTINATION_ICONS_PATH, `${componentName}.svelte`),

@@ -57,52 +57,36 @@ async function generateNewComponents() {
 
         const componentName = createComponentName(originalName);
 
-        // exports.push(
-        //     `export { default as ${componentName} } from './icons/${originalName}.js';`
-        // );
-
         const [, svgContent] = /<svg[^>]*>([\s\S]*?)<\/svg>/.exec(
             svgFileContents
         );
 
-        console.log(getComponentTemplate());
-        let source = getComponentTemplate()
-            // .replace(/%%COMPONENT_NAME%%/g, componentName)
-            // .replace(/%%ORIGINAL_NAME%%/g, originalName)
-            .replace(/%%SVG_CONTENT%%/g, svgContent);
+        let source = getComponentTemplate().replace(
+            /%%SVG_CONTENT%%/g,
+            svgContent
+        );
 
         fs.writeFileSync(
-            path.resolve(DESTINATION_ICONS_PATH, `${originalName}.svelte`),
+            path.resolve(DESTINATION_ICONS_PATH, `${componentName}.svelte`),
             source
         );
     }
-
-    // fs.writeFileSync(
-    //     path.resolve(__dirname, "../src/index.js"),
-    //     prettier.format(exports.join("\n"), {
-    //         parser: "babel",
-    //         ...prettierOptions,
-    //     })
-    // );
 }
 
-async function createTypesFile() {
+async function createIndexFile() {
     const exports = findIcons().map((file) => {
         const [originalName] = file.split(".");
         const componentName = createComponentName(originalName);
 
-        return `export const ${componentName}: Icon;`;
+        return `export { default as ${componentName} } from "./${componentName}.svelte"`;
     });
 
     fs.writeFileSync(
-        path.resolve(__dirname, "../src/index.d.ts"),
-        prettier.format(getTypesTemplate() + exports.join("\n"), {
-            parser: "babel-ts",
-            ...prettierOptions,
-        })
+        path.resolve(__dirname, "../src/index.js"),
+        exports.join("\n")
     );
 }
 
 removeOldComponents();
-// generateNewComponents();
-// createTypesFile();
+generateNewComponents();
+createIndexFile();

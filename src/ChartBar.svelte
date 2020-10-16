@@ -1,0 +1,25 @@
+<script>
+    export let size = 24;
+    export let color = "currentColor";
+</script>
+
+<svg
+    xmlns='http://www.w3.org/2000/svg'
+    className='icon icon-tabler icon-tabler-%%ORIGINAL_NAME%%'
+    width={size}
+    height={size}
+    viewBox='0 0 24 24'
+    stroke={color}
+    strokeWidth='2'
+    fill='none'
+    strokeLinecap='round'
+    strokeLinejoin='round'
+>
+      
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <rect x="3" y="12" width="6" height="8" rx="1" />
+  <rect x="9" y="8" width="6" height="12" rx="1" />
+  <rect x="15" y="4" width="6" height="16" rx="1" />
+  <line x1="4" y1="20" x2="18" y2="20" />
+
+</svg>

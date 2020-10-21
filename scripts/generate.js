@@ -61,10 +61,9 @@ async function generateNewComponents() {
             svgFileContents
         );
 
-        let source = getComponentTemplate().replace(
-            /%%SVG_CONTENT%%/g,
-            svgContent
-        );
+        let source = getComponentTemplate()
+            .replace(/%%SVG_CONTENT%%/g, svgContent)
+            .replace(/%%ORIGINAL_NAME%%/g, originalName);
 
         fs.writeFileSync(
             path.resolve(DESTINATION_ICONS_PATH, `${componentName}.svelte`),

@@ -1,7 +1,7 @@
 # tabler-icons-svelte
 
 [![npm version][npm-version]][npm]
-[![MIT License][license]](LICENCE)
+[![MIT License][license]](LICENSE)
 
 <!-- [![npm downloads][npm-downloads]][npm] -->
 

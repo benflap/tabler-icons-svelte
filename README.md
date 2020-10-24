@@ -1,5 +1,10 @@
 # tabler-icons-svelte
 
+[![npm version][npm-version]][npm]
+[![MIT License][license]](LICENCE)
+
+<!-- [![npm downloads][npm-downloads]][npm] -->
+
 A library of Svelte components for [Tabler Icons](https://github.com/tabler/tabler-icons).
 
 > A set of over 850 free MIT-licensed high-quality SVG icons for you to use in your web projects. Each icon is designed on a 24x24 grid and a `2px` stroke.
@@ -57,3 +62,8 @@ The components each accept 3 props:
 ## License
 
 [MIT](LICENSE)
+
+[npm]: https://www.npmjs.com/package/tabler-icons-svelte
+[npm-version]: https://img.shields.io/npm/v/tabler-icons-svelte
+[npm-downloads]: https://img.shields.io/npm/dw/tabler-icons-svelte
+[license]: https://img.shields.io/github/license/benflap/tabler-icons-svelte

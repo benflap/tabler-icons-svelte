@@ -20,7 +20,7 @@ npm install tabler-icons-svelte  --save-dev
 
 Import components inside of the `<script>` and use like any other Svelte component.
 
-#### One
+### One
 
 ```svelte
 <script>
@@ -30,7 +30,7 @@ Import components inside of the `<script>` and use like any other Svelte compone
 <Volume2 />
 ```
 
-#### More Than One
+### More Than One
 
 ```svelte
 <script>
@@ -41,3 +41,19 @@ Import components inside of the `<script>` and use like any other Svelte compone
 <BrandGithub />
 <CircleX />
 ```
+
+[View all component names](ICON_INDEX.md)
+
+## Props
+
+The components each accept 3 props:
+
+| Prop        | Default |
+| ----------- | ------- |
+| size        | 24      |
+| color       | #000000 |
+| strokeWidth | 2       |
+
+## License
+
+[MIT](LICENSE)

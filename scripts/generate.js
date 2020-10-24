@@ -20,6 +20,13 @@ function getComponentTemplate() {
     );
 }
 
+function getDocTemplate() {
+    return fs.readFileSync(
+        path.resolve(__dirname, "./ICON_INDEX_TEMPLATE.md"),
+        "utf8"
+    );
+}
+
 function findIcons() {
     return fs
         .readdirSync(SOURCE_ICONS_PATH)
@@ -86,6 +93,21 @@ async function createIndexFile() {
     );
 }
 
+async function createDocFile() {
+    const rows = findIcons().map((file) => {
+        const [originalName] = file.split(".");
+        const componentName = createComponentName(originalName);
+
+        return `| ${componentName} | ${originalName} |`;
+    });
+
+    fs.writeFileSync(
+        path.resolve(__dirname, "../ICON_INDEX.md"),
+        getDocTemplate() + rows.join("\n")
+    );
+}
+
 removeOldComponents();
 generateNewComponents();
 createIndexFile();
+createDocFile();

@@ -5,7 +5,7 @@ const SOURCE_ICONS_PATH = path.resolve(
     __dirname,
     "../node_modules/tabler-icons/icons"
 );
-const DESTINATION_ICONS_PATH = path.resolve(__dirname, "../src");
+const DESTINATION_ICONS_PATH = path.resolve(__dirname, "../dist");
 
 function pascalCase(string) {
     return string
@@ -81,7 +81,7 @@ async function createIndexFile() {
     });
 
     fs.writeFileSync(
-        path.resolve(__dirname, "../src/index.js"),
+        path.resolve(DESTINATION_ICONS_PATH, "index.js"),
         exports.join("\n")
     );
 }

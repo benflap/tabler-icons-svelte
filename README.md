@@ -1,9 +1,8 @@
 # tabler-icons-svelte
 
 [![npm version][npm-version]][npm]
+[![npm downloads][npm-downloads]][npm]
 [![MIT License][license]](LICENSE)
-
-<!-- [![npm downloads][npm-downloads]][npm] -->
 
 A library of Svelte components for [Tabler Icons](https://github.com/tabler/tabler-icons).
 

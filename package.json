@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Tabler Icons as svelte components.",
     "license": "MIT",
-    "author": "Ben Lapp <benuel@hey.com>",
+    "author": "Ben Lapp <kx8bcz5bw@relay.firefox.com>",
     "repository": {
         "type": "git",
         "url": "https://github.com/benflap/tabler-icons-svelte.git"

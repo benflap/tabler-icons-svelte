@@ -1,6 +1,6 @@
 {
     "name": "tabler-icons-svelte",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Tabler Icons as svelte components.",
     "license": "MIT",
     "author": "Ben Lapp <kx8bcz5bw@relay.firefox.com>",
@@ -19,5 +19,12 @@
     "files": [
         "dist",
         "ICON_INDEX.md"
+    ],
+    "keywords": [
+        "svelte",
+        "components",
+        "svg",
+        "icons",
+        "tabler-icons"
     ]
 }

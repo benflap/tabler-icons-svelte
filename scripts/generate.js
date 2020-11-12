@@ -3,7 +3,7 @@ const path = require("path");
 
 const SOURCE_ICONS_PATH = path.resolve(
     __dirname,
-    "../node_modules/tabler-icons/icons"
+    "../node_modules/@tabler/icons/icons/"
 );
 const DESTINATION_ICONS_PATH = path.resolve(__dirname, "../dist");
 

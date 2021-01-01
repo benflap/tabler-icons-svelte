@@ -2,7 +2,7 @@
 
 ### 1.4.0
 
--   Change defualt color to `currentColor`. ([#5](https://github.com/benflap/tabler-icons-svelte/issues/5))
+-   Change default color to `currentColor`. ([#5](https://github.com/benflap/tabler-icons-svelte/issues/5))
 
 ### 1.3.0
 

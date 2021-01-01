@@ -1,6 +1,6 @@
 <script>
     export let size = 24;
-    export let color = "#000000";
+    export let color = "currentColor";
     export let strokeWidth = 2;
 </script>
 

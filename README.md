@@ -52,11 +52,11 @@ Import components inside of the `<script>` and use like any other Svelte compone
 
 The components each accept 3 props:
 
-| Prop        | Default |
-| ----------- | ------- |
-| size        | 24      |
-| color       | #000000 |
-| strokeWidth | 2       |
+| Prop        | Default        |
+| ----------- | -------------- |
+| size        | 24             |
+| color       | `currentColor` |
+| strokeWidth | 2              |
 
 ## License
 

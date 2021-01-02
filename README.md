@@ -18,7 +18,7 @@ yarn add tabler-icons-svelte --dev
 npm install tabler-icons-svelte  --save-dev
 ```
 
-`tabler-icons-svelte` needs to be added as dev dependency as Svelte [requires original component source](https://github.com/sveltejs/sapper-template#using-external-components)
+`tabler-icons-svelte` needs to be added as a dev dependency as Svelte [requires original component source](https://github.com/sveltejs/sapper-template#using-external-components)
 
 ## Usage
 
@@ -57,6 +57,10 @@ The components each accept 3 props:
 | size        | 24             |
 | color       | `currentColor` |
 | strokeWidth | 2              |
+
+## Development Workflow
+
+See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## License
 

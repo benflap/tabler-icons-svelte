@@ -5,7 +5,8 @@ const SOURCE_ICONS_PATH = path.resolve(
     __dirname,
     "../node_modules/@tabler/icons/icons/"
 );
-const DESTINATION_ICONS_PATH = path.resolve(__dirname, "../dist");
+const DIST_PATH = path.resolve(__dirname, "../dist");
+const DESTINATION_ICONS_PATH = path.resolve(__dirname, "../dist/icons");
 
 function pascalCase(string) {
     return string
@@ -27,6 +28,12 @@ function getDocTemplate() {
     );
 }
 
+function createDir(path) {
+    if (!fs.existsSync(path)) {
+        fs.mkdirSync(path);
+    }
+}
+
 function findIcons() {
     return fs
         .readdirSync(SOURCE_ICONS_PATH)
@@ -46,7 +53,6 @@ function removeOldComponents() {
     const components = fs
         .readdirSync(DESTINATION_ICONS_PATH)
         .filter((file) => file.endsWith(".svelte"));
-
     for (const file of components) {
         fs.unlinkSync(path.join(DESTINATION_ICONS_PATH, file));
     }
@@ -84,13 +90,21 @@ async function createIndexFile() {
         const [originalName] = file.split(".");
         const componentName = createComponentName(originalName);
 
-        return `export { default as ${componentName} } from "./${componentName}.svelte"`;
+        return `export { default as ${componentName} } from "./icons/${componentName}.svelte"`;
     });
 
-    fs.writeFileSync(
-        path.resolve(DESTINATION_ICONS_PATH, "index.js"),
-        exports.join("\n")
-    );
+    fs.writeFileSync(path.resolve(DIST_PATH, "index.js"), exports.join("\n"));
+}
+
+async function createTypesFile() {
+    const exports = findIcons().map((file) => {
+        const [originalName] = file.split(".");
+        const componentName = createComponentName(originalName);
+
+        return `export const ${componentName}: any;`;
+    });
+
+    fs.writeFileSync(path.resolve(DIST_PATH, "index.d.ts"), exports.join("\n"));
 }
 
 async function createDocFile() {
@@ -107,7 +121,12 @@ async function createDocFile() {
     );
 }
 
+createDir(DIST_PATH);
+createDir(DESTINATION_ICONS_PATH);
+
 removeOldComponents();
 generateNewComponents();
+
 createIndexFile();
+createTypesFile();
 createDocFile();

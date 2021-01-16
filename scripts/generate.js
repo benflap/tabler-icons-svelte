@@ -21,6 +21,13 @@ function getComponentTemplate() {
     );
 }
 
+function getTypesTemplate() {
+    return fs.readFileSync(
+        path.resolve(__dirname, "./types-template.d.ts"),
+        "utf8"
+    );
+}
+
 function getDocTemplate() {
     return fs.readFileSync(
         path.resolve(__dirname, "./ICON_INDEX_TEMPLATE.md"),
@@ -101,10 +108,13 @@ async function createTypesFile() {
         const [originalName] = file.split(".");
         const componentName = createComponentName(originalName);
 
-        return `export const ${componentName}: any;`;
+        return `export const ${componentName}: TablerIconComponent;`;
     });
 
-    fs.writeFileSync(path.resolve(DIST_PATH, "index.d.ts"), exports.join("\n"));
+    fs.writeFileSync(
+        path.resolve(DIST_PATH, "index.d.ts"),
+        getTypesTemplate() + exports.join("\n")
+    );
 }
 
 async function createDocFile() {

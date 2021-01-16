@@ -27,5 +27,8 @@
         "svg",
         "icons",
         "tabler-icons"
-    ]
+    ],
+    "dependencies": {
+        "svelte": "^3.31.2"
+    }
 }

@@ -1,5 +1,9 @@
 # tabler-icons-svelte changelog
 
+### 1.5.0
+
+-   Add 268 new icons added in [tabler-icons][tabler-icons] [v1.39.0](https://github.com/tabler/tabler-icons/releases/tag/v1.39.0)
+
 ### 1.4.0
 
 -   Change defualt color to `currentColor`. ([#5](https://github.com/benflap/tabler-icons-svelte/issues/5))

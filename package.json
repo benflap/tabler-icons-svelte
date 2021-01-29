@@ -15,7 +15,8 @@
         "build": "node ./scripts/generate.js"
     },
     "devDependencies": {
-        "@tabler/icons": "^1.39.1"
+        "@tabler/icons": "^1.39.1",
+        "prettier": "^2.2.1"
     },
     "peerDependencies": {
         "svelte": ">=3.31.0 <=4"

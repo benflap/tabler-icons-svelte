@@ -1,5 +1,8 @@
 const fs = require("fs");
 const path = require("path");
+const prettier = require("prettier");
+
+const { format } = prettier;
 
 const SOURCE_ICONS_PATH = path.resolve(
     __dirname,
@@ -7,6 +10,8 @@ const SOURCE_ICONS_PATH = path.resolve(
 );
 const DIST_PATH = path.resolve(__dirname, "../");
 const DESTINATION_ICONS_PATH = path.resolve(__dirname, "../icons");
+
+const prettierOptions = prettier.resolveConfig(__dirname);
 
 function pascalCase(string) {
     return string
@@ -87,7 +92,7 @@ async function generateNewComponents() {
 
         fs.writeFileSync(
             path.resolve(DESTINATION_ICONS_PATH, `${componentName}.svelte`),
-            source
+            format(source, { parser: "html", ...(await prettierOptions) })
         );
     }
 }
@@ -100,7 +105,13 @@ async function createIndexFile() {
         return `export { default as ${componentName} } from "./icons/${componentName}.svelte"`;
     });
 
-    fs.writeFileSync(path.resolve(DIST_PATH, "index.js"), exports.join("\n"));
+    fs.writeFileSync(
+        path.resolve(DIST_PATH, "index.js"),
+        format(exports.join("\n"), {
+            parser: "babel",
+            ...(await prettierOptions),
+        })
+    );
 }
 
 async function createTypesFile() {
@@ -108,18 +119,21 @@ async function createTypesFile() {
         const [originalName] = file.split(".");
         const componentName = createComponentName(originalName);
 
-        return `
+        return `\
             export class ${componentName} extends SvelteComponentTyped<{
                 color?: string;
                 size?: string | number;
                 strokeWidth?: string | number;
-            }> {}
+            }> {}\
         `;
     });
 
     fs.writeFileSync(
         path.resolve(DIST_PATH, "index.d.ts"),
-        getTypesTemplate() + exports.join("\n")
+        format(getTypesTemplate() + exports.join("\n"), {
+            parser: "typescript",
+            ...(await prettierOptions),
+        })
     );
 }
 
@@ -133,7 +147,10 @@ async function createDocFile() {
 
     fs.writeFileSync(
         path.resolve(__dirname, "../ICON_INDEX.md"),
-        getDocTemplate() + rows.join("\n")
+        format(getDocTemplate() + rows.join("\n"), {
+            parser: "markdown",
+            ...(await prettierOptions),
+        })
     );
 }
 

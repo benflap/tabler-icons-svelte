@@ -17,6 +17,9 @@
     "devDependencies": {
         "@tabler/icons": "^1.38.0"
     },
+    "peerDependencies": {
+        "svelte": ">=3.31.0 <=4"
+    },
     "files": [
         "dist",
         "ICON_INDEX.md"
@@ -27,8 +30,5 @@
         "svg",
         "icons",
         "tabler-icons"
-    ],
-    "dependencies": {
-        "svelte": "^3.31.2"
-    }
+    ]
 }

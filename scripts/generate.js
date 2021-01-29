@@ -108,7 +108,13 @@ async function createTypesFile() {
         const [originalName] = file.split(".");
         const componentName = createComponentName(originalName);
 
-        return `export const ${componentName}: TablerIconComponent;`;
+        return `
+            export class ${componentName} extends SvelteComponentTyped<{
+                color?: string;
+                size?: string | number;
+                strokeWidth?: string | number;
+            }> {}
+        `;
     });
 
     fs.writeFileSync(

@@ -5,8 +5,8 @@ const SOURCE_ICONS_PATH = path.resolve(
     __dirname,
     "../node_modules/@tabler/icons/icons/"
 );
-const DIST_PATH = path.resolve(__dirname, "../dist");
-const DESTINATION_ICONS_PATH = path.resolve(__dirname, "../dist/icons");
+const DIST_PATH = path.resolve(__dirname, "../");
+const DESTINATION_ICONS_PATH = path.resolve(__dirname, "../icons");
 
 function pascalCase(string) {
     return string
@@ -137,7 +137,6 @@ async function createDocFile() {
     );
 }
 
-createDir(DIST_PATH);
 createDir(DESTINATION_ICONS_PATH);
 
 removeOldComponents();

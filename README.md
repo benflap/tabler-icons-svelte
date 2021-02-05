@@ -6,7 +6,7 @@
 
 A library of Svelte components for [Tabler Icons](https://github.com/tabler/tabler-icons).
 
-> A set of over 850 free MIT-licensed high-quality SVG icons for you to use in your web projects. Each icon is designed on a 24x24 grid and a `2px` stroke.
+> A set of over 1250 free MIT-licensed high-quality SVG icons for you to use in your web projects. Each icon is designed on a 24x24 grid and a `2px` stroke.
 
 ## Installation
 
@@ -24,17 +24,14 @@ npm install tabler-icons-svelte  --save-dev
 
 Import components inside of the `<script>` and use like any other Svelte component.
 
-### One
+Find icons:
 
-```svelte
-<script>
-    import Volume2 from "tabler-icons-svelte";
-</script>
+-   Search on [tabler-icons.io](https://tabler-icons.io/)
+-   View [component names](ICON_INDEX.md)
 
-<Volume2 />
-```
+### Import Components From Package
 
-### More Than One
+The easiest way to use the icon components is by importing them from the package.
 
 ```svelte
 <script>
@@ -46,7 +43,19 @@ Import components inside of the `<script>` and use like any other Svelte compone
 <CircleX />
 ```
 
-[View all component names](ICON_INDEX.md)
+### Import Components From File
+
+If your build times are high, import the components from their svelte files.
+
+```svelte
+<script>
+    import Volume2 from "tabler-icons-svelte/icons/Volume2.svelte";
+    import CurrencyBitcoin from "tabler-icons-svelte/icons/CurrencyBitcoin.svelte";
+</script>
+
+<Volume2 />
+<CurrencyBitcoin size="2rem" />
+```
 
 ## Props
 

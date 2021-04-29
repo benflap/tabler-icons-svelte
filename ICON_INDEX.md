@@ -9,6 +9,7 @@
 | AccessPoint                | access-point                 |
 | Accessible                 | accessible                   |
 | Activity                   | activity                     |
+| Ad2                        | ad-2                         |
 | Ad                         | ad                           |
 | AdjustmentsAlt             | adjustments-alt              |
 | AdjustmentsHorizontal      | adjustments-horizontal       |
@@ -26,12 +27,14 @@
 | AlignRight                 | align-right                  |
 | Ambulance                  | ambulance                    |
 | Anchor                     | anchor                       |
+| Angle                      | angle                        |
 | AntennaBars1               | antenna-bars-1               |
 | AntennaBars2               | antenna-bars-2               |
 | AntennaBars3               | antenna-bars-3               |
 | AntennaBars4               | antenna-bars-4               |
 | AntennaBars5               | antenna-bars-5               |
 | Aperture                   | aperture                     |
+| Apple                      | apple                        |
 | Apps                       | apps                         |
 | Archive                    | archive                      |
 | ArrowBackUp                | arrow-back-up                |
@@ -178,10 +181,13 @@
 | BorderOuter                | border-outer                 |
 | BorderRadius               | border-radius                |
 | BorderRight                | border-right                 |
+| BorderStyle2               | border-style-2               |
 | BorderStyle                | border-style                 |
 | BorderTop                  | border-top                   |
 | BorderVertical             | border-vertical              |
+| Bottle                     | bottle                       |
 | BoxMargin                  | box-margin                   |
+| BoxModel2                  | box-model-2                  |
 | BoxModel                   | box-model                    |
 | BoxMultiple0               | box-multiple-0               |
 | BoxMultiple1               | box-multiple-1               |
@@ -234,6 +240,7 @@
 | BrandHipchat               | brand-hipchat                |
 | BrandHtml5                 | brand-html5                  |
 | BrandInstagram             | brand-instagram              |
+| BrandJavascript            | brand-javascript             |
 | BrandKickstarter           | brand-kickstarter            |
 | BrandKotlin                | brand-kotlin                 |
 | BrandLinkedin              | brand-linkedin               |
@@ -272,6 +279,7 @@
 | BrandTwitch                | brand-twitch                 |
 | BrandTwitter               | brand-twitter                |
 | BrandUnsplash              | brand-unsplash               |
+| BrandVercel                | brand-vercel                 |
 | BrandVimeo                 | brand-vimeo                  |
 | BrandVk                    | brand-vk                     |
 | BrandWhatsapp              | brand-whatsapp               |
@@ -327,7 +335,9 @@
 | CameraRotate               | camera-rotate                |
 | CameraSelfie               | camera-selfie                |
 | Camera                     | camera                       |
+| Candy                      | candy                        |
 | Capture                    | capture                      |
+| CarCrane                   | car-crane                    |
 | Car                        | car                          |
 | Caravan                    | caravan                      |
 | Cardboards                 | cardboards                   |
@@ -367,6 +377,7 @@
 | Check                      | check                        |
 | Checkbox                   | checkbox                     |
 | Checks                     | checks                       |
+| Cheese                     | cheese                       |
 | ChevronDownLeft            | chevron-down-left            |
 | ChevronDownRight           | chevron-down-right           |
 | ChevronDown                | chevron-down                 |
@@ -425,6 +436,7 @@
 | CodeMinus                  | code-minus                   |
 | CodePlus                   | code-plus                    |
 | Code                       | code                         |
+| Coffee                     | coffee                       |
 | Coin                       | coin                         |
 | ColorPicker                | color-picker                 |
 | ColorSwatch                | color-swatch                 |
@@ -437,6 +449,7 @@
 | Confetti                   | confetti                     |
 | Container                  | container                    |
 | Contrast                   | contrast                     |
+| Cookie                     | cookie                       |
 | Copy                       | copy                         |
 | Copyleft                   | copyleft                     |
 | Copyright                  | copyright                    |
@@ -456,12 +469,14 @@
 | CornerUpLeft               | corner-up-left               |
 | CornerUpRightDouble        | corner-up-right-double       |
 | CornerUpRight              | corner-up-right              |
+| Crane                      | crane                        |
 | CreditCardOff              | credit-card-off              |
 | CreditCard                 | credit-card                  |
 | Crop                       | crop                         |
 | Crosshair                  | crosshair                    |
 | CrownOff                   | crown-off                    |
 | Crown                      | crown                        |
+| Cup                        | cup                          |
 | CurlyLoop                  | curly-loop                   |
 | CurrencyBahraini           | currency-bahraini            |
 | CurrencyBath               | currency-bath                |
@@ -541,6 +556,7 @@
 | Discount                   | discount                     |
 | Divide                     | divide                       |
 | Dna                        | dna                          |
+| DogBowl                    | dog-bowl                     |
 | DotsCircleHorizontal       | dots-circle-horizontal       |
 | DotsDiagonal2              | dots-diagonal-2              |
 | DotsDiagonal               | dots-diagonal                |
@@ -577,6 +593,7 @@
 | FaceId                     | face-id                      |
 | Fall                       | fall                         |
 | Feather                    | feather                      |
+| Fence                      | fence                        |
 | FileAlert                  | file-alert                   |
 | FileAnalytics              | file-analytics               |
 | FileCertificate            | file-certificate             |
@@ -612,6 +629,7 @@
 | Filter                     | filter                       |
 | Fingerprint                | fingerprint                  |
 | Firetruck                  | firetruck                    |
+| Fish                       | fish                         |
 | Flag2                      | flag-2                       |
 | Flag3                      | flag-3                       |
 | Flag                       | flag                         |
@@ -742,6 +760,7 @@
 | Layout                     | layout                       |
 | Leaf                       | leaf                         |
 | Lego                       | lego                         |
+| Lemon                      | lemon                        |
 | LetterA                    | letter-a                     |
 | LetterB                    | letter-b                     |
 | LetterC                    | letter-c                     |
@@ -782,6 +801,7 @@
 | Line                       | line                         |
 | Link                       | link                         |
 | ListCheck                  | list-check                   |
+| ListNumbers                | list-numbers                 |
 | ListSearch                 | list-search                  |
 | List                       | list                         |
 | LivePhoto                  | live-photo                   |
@@ -819,6 +839,7 @@
 | MathSymbols                | math-symbols                 |
 | Math                       | math                         |
 | Maximize                   | maximize                     |
+| Meat                       | meat                         |
 | Medal                      | medal                        |
 | MedicalCross               | medical-cross                |
 | Menu2                      | menu-2                       |
@@ -834,8 +855,10 @@
 | Message                    | message                      |
 | MessagesOff                | messages-off                 |
 | Messages                   | messages                     |
+| Microphone2                | microphone-2                 |
 | MicrophoneOff              | microphone-off               |
 | Microphone                 | microphone                   |
+| Milk                       | milk                         |
 | Minimize                   | minimize                     |
 | MinusVertical              | minus-vertical               |
 | Minus                      | minus                        |
@@ -860,6 +883,7 @@
 | Mouse                      | mouse                        |
 | Movie                      | movie                        |
 | Mug                        | mug                          |
+| Mushroom                   | mushroom                     |
 | Music                      | music                        |
 | NewSection                 | new-section                  |
 | News                       | news                         |
@@ -899,6 +923,7 @@
 | Peace                      | peace                        |
 | Pencil                     | pencil                       |
 | Pennant                    | pennant                      |
+| Pepper                     | pepper                       |
 | Percentage                 | percentage                   |
 | Perspective                | perspective                  |
 | PhoneCall                  | phone-call                   |
@@ -955,6 +980,7 @@
 | Pyramid                    | pyramid                      |
 | Qrcode                     | qrcode                       |
 | QuestionMark               | question-mark                |
+| Radio                      | radio                        |
 | Radioactive                | radioactive                  |
 | RadiusBottomLeft           | radius-bottom-left           |
 | RadiusBottomRight          | radius-bottom-right          |
@@ -1002,7 +1028,9 @@
 | Ruler                      | ruler                        |
 | Run                        | run                          |
 | Sailboat                   | sailboat                     |
+| Salt                       | salt                         |
 | Satellite                  | satellite                    |
+| Sausage                    | sausage                      |
 | Scale                      | scale                        |
 | Scan                       | scan                         |
 | School                     | school                       |
@@ -1057,9 +1085,14 @@
 | Social                     | social                       |
 | Sock                       | sock                         |
 | SortAscending2             | sort-ascending-2             |
+| SortAscendingLetters       | sort-ascending-letters       |
+| SortAscendingNumbers       | sort-ascending-numbers       |
 | SortAscending              | sort-ascending               |
 | SortDescending2            | sort-descending-2            |
+| SortDescendingLetters      | sort-descending-letters      |
+| SortDescendingNumbers      | sort-descending-numbers      |
 | SortDescending             | sort-descending              |
+| Soup                       | soup                         |
 | Space                      | space                        |
 | Speakerphone               | speakerphone                 |
 | Speedboat                  | speedboat                    |
@@ -1112,8 +1145,8 @@
 | Sum                        | sum                          |
 | SunOff                     | sun-off                      |
 | Sun                        | sun                          |
+| Sunrise                    | sunrise                      |
 | Sunset                     | sunset                       |
-| Sunshine                   | sunshine                     |
 | Superscript                | superscript                  |
 | Swimming                   | swimming                     |
 | Switch2                    | switch-2                     |
@@ -1166,6 +1199,8 @@
 | TrafficCone                | traffic-cone                 |
 | TrafficLights              | traffic-lights               |
 | Train                      | train                        |
+| TransferIn                 | transfer-in                  |
+| TransferOut                | transfer-out                 |
 | TrashOff                   | trash-off                    |
 | Trash                      | trash                        |
 | Tree                       | tree                         |
@@ -1202,7 +1237,7 @@
 | Vaccine                    | vaccine                      |
 | Variable                   | variable                     |
 | VectorBeizer2              | vector-beizer-2              |
-| VectorBeizer               | vector-beizer                |
+| VectorBezier               | vector-bezier                |
 | VectorTriangle             | vector-triangle              |
 | Vector                     | vector                       |
 | Venus                      | venus                        |
@@ -1218,6 +1253,7 @@
 | VirusOff                   | virus-off                    |
 | VirusSearch                | virus-search                 |
 | Virus                      | virus                        |
+| Vocabulary                 | vocabulary                   |
 | Volume2                    | volume-2                     |
 | Volume3                    | volume-3                     |
 | Volume                     | volume                       |

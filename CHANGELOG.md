@@ -1,5 +1,9 @@
 # tabler-icons-svelte changelog
 
+## 1.8.0
+
+-   Bump [tabler-icons][tabler-icons] from [v1.41.1](https://github.com/tabler/tabler-icons/releases/tag/v1.41.1) to [v1.51.0](https://github.com/tabler/tabler-icons/releases/tag/v1.51.0)
+
 ## 1.7.0
 
 -   Bump [tabler-icons][tabler-icons] from [v1.39.0](https://github.com/tabler/tabler-icons/releases/tag/v1.39.0) to [v1.41.1](https://github.com/tabler/tabler-icons/releases/tag/v1.41.1)

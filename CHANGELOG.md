@@ -3,7 +3,7 @@
 ## 1.8.0
 
 -   Bump [tabler-icons][tabler-icons] from [v1.41.1](https://github.com/tabler/tabler-icons/releases/tag/v1.41.1) to [v1.68.0](https://github.com/tabler/tabler-icons/releases/tag/v1.68.0)
--   Add `"type": "module"` to `package.json` so the package works with `svelte-kit` (#8)
+-   Add `"type": "module"` to `package.json` so the package works with `svelte-kit`
 
 ## 1.7.0
 

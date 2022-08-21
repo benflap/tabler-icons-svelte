@@ -66,6 +66,7 @@ The components each accept 3 props:
 | size        | 24             |
 | color       | `currentColor` |
 | strokeWidth | 2              |
+| class       | `""`           |
 
 ## Development Workflow
 

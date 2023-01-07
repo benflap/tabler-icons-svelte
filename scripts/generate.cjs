@@ -102,7 +102,7 @@ async function createIndexFile() {
         const [originalName] = file.split(".");
         const componentName = createComponentName(originalName);
 
-        return `export { default as ${componentName} } from "./icons/${componentName}.svelte"`;
+        return `export { default as ${componentName}, default as Icon${componentName} } from "./icons/${componentName}.svelte"`;
     });
 
     fs.writeFileSync(

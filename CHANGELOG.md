@@ -1,5 +1,10 @@
 # tabler-icons-svelte changelog
 
+## 1.9.0
+
+-   Support passing down `class` prop ([#10](https://github.com/benflap/tabler-icons-svelte/pull/10))
+-   Bump [tabler-icons][tabler-icons] from [v1.68.0](https://github.com/tabler/tabler-icons/releases/tag/v1.68.0) to [v1.84.0](https://github.com/tabler/tabler-icons/releases/tag/v1.84.0)
+
 ## 1.8.0
 
 -   Bump [tabler-icons][tabler-icons] from [v1.41.1](https://github.com/tabler/tabler-icons/releases/tag/v1.41.1) to [v1.68.0](https://github.com/tabler/tabler-icons/releases/tag/v1.68.0)

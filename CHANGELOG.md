@@ -1,5 +1,9 @@
 # tabler-icons-svelte changelog
 
+### 1.9.1
+
+-   fix missing type declaration for `class` prop
+
 ## 1.9.0
 
 -   Support passing down `class` prop ([#10](https://github.com/benflap/tabler-icons-svelte/pull/10))

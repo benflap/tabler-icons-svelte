@@ -1,8 +1,9 @@
-const fs = require("fs");
-const path = require("path");
-const prettier = require("prettier");
+import fs from "node:fs";
+import path, { dirname } from "node:path";
+import prettier, { format } from "prettier";
+import { fileURLToPath } from "node:url";
 
-const { format } = prettier;
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const SOURCE_ICONS_PATH = path.resolve(
     __dirname,
@@ -10,6 +11,7 @@ const SOURCE_ICONS_PATH = path.resolve(
 );
 const DIST_PATH = path.resolve(__dirname, "../");
 const DESTINATION_ICONS_PATH = path.resolve(__dirname, "../icons");
+const TYPES_PATH = path.resolve(DIST_PATH, "types");
 
 const prettierOptions = prettier.resolveConfig(__dirname);
 
@@ -62,9 +64,7 @@ function createComponentName(originalName) {
 }
 
 function removeOldComponents() {
-    const components = fs
-        .readdirSync(DESTINATION_ICONS_PATH)
-        .filter((file) => file.endsWith(".svelte"));
+    const components = fs.readdirSync(DESTINATION_ICONS_PATH);
     for (const file of components) {
         fs.unlinkSync(path.join(DESTINATION_ICONS_PATH, file));
     }
@@ -92,7 +92,7 @@ async function generateNewComponents() {
 
         fs.writeFileSync(
             path.resolve(DESTINATION_ICONS_PATH, `${componentName}.svelte`),
-            format(source, { parser: "html", ...(await prettierOptions) })
+            format(source, { parser: "svelte", ...(await prettierOptions) })
         );
     }
 }
@@ -119,13 +119,7 @@ async function createTypesFile() {
         const [originalName] = file.split(".");
         const componentName = createComponentName(originalName);
 
-        return `\
-            export class ${componentName} extends SvelteComponentTyped<{
-                color?: string;
-                size?: string | number;
-                strokeWidth?: string | number;
-            }> {}\
-        `;
+        return `export class ${componentName} extends TablerIcon {}`;
     });
 
     fs.writeFileSync(

@@ -59,14 +59,14 @@ If your build times are high, import the components from their svelte files.
 
 ## Props
 
-The components each accept 3 props:
+The components each accept 4 optional props:
 
-| Prop        | Default        |
-| ----------- | -------------- |
-| size        | 24             |
-| color       | `currentColor` |
-| strokeWidth | 2              |
-| class       | `""`           |
+| Prop        | Default        | Description                                                                              |
+| ----------- | -------------- | ---------------------------------------------------------------------------------------- |
+| size        | 24             | The size of the Icon. Measured in pixels if no other unit is passed.                     |
+| color       | `currentColor` | Any valid CSS [\<color\>](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value). |
+| strokeWidth | 2              | The SVG's stroke width. Measured in pixels if no other unit is passed.                   |
+| class       | `undefined`    | Classes that are passed down to the SVG.                                                 |
 
 ## Development Workflow
 

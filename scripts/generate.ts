@@ -15,7 +15,7 @@ const TYPES_PATH = path.resolve(DIST_PATH, "types");
 
 const prettierOptions = prettier.resolveConfig(__dirname);
 
-function pascalCase(string) {
+function pascalCase(string: string) {
     return string
         .replace(/(^\w|-\w)/g, (letter) => letter.toUpperCase())
         .replace(/-/g, "");
@@ -42,7 +42,7 @@ function getDocTemplate() {
     );
 }
 
-function createDir(path) {
+function createDir(path: string) {
     if (!fs.existsSync(path)) {
         fs.mkdirSync(path);
     }
@@ -54,7 +54,7 @@ function findIcons() {
         .filter((file) => file.endsWith(".svg"));
 }
 
-function createComponentName(originalName) {
+function createComponentName(originalName: string) {
     return (
         pascalCase(originalName)
             // A digit at the beginning of component name is not allowed
@@ -82,9 +82,8 @@ async function generateNewComponents() {
 
         const componentName = createComponentName(originalName);
 
-        const [, svgContent] = /<svg[^>]*>([\s\S]*?)<\/svg>/.exec(
-            svgFileContents
-        );
+        const [, svgContent] =
+            /<svg[^>]*>([\s\S]*?)<\/svg>/.exec(svgFileContents) ?? [];
 
         let source = getComponentTemplate()
             .replace(/%%SVG_CONTENT%%/g, svgContent)

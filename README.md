@@ -1,5 +1,11 @@
 # tabler-icons-svelte
 
+## This package is no longer supported
+
+Use [@tabler/icons-svelte](https://github.com/tabler/tabler-icons/tree/master/packages/icons-svelte) instead.
+
+<hr/>
+
 [![npm version][npm-version]][npm]
 [![npm downloads][npm-downloads]][npm]
 [![MIT License][license]](LICENSE)

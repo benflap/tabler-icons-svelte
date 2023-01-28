@@ -1,5 +1,9 @@
 # tabler-icons-svelte changelog
 
+## 1.10.0
+
+-   Bump [tabler-icons][tabler-icons] from [v1.84.0](https://github.com/tabler/tabler-icons/releases/tag/v1.84.0) to [v2.1.2](https://github.com/tabler/tabler-icons/releases/tag/v2.1.2)
+
 ### 1.9.1
 
 -   fix missing type declaration for `class` prop

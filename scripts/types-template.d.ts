@@ -7,4 +7,4 @@ type TablerIconProps = {
     class?: string;
 };
 
-class TablerIcon extends SvelteComponentTyped<TablerIconProps> {}
+declare class TablerIcon extends SvelteComponentTyped<TablerIconProps> {}

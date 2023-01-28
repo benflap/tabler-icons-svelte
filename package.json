@@ -1,6 +1,6 @@
 {
     "name": "tabler-icons-svelte",
-    "version": "1.9.1",
+    "version": "1.10.0",
     "description": "Tabler Icons as svelte components.",
     "license": "MIT",
     "author": "Ben Lapp <kx8bcz5bw@relay.firefox.com>",
@@ -16,7 +16,7 @@
         "build": "ts-node-esm ./scripts/generate.ts"
     },
     "devDependencies": {
-        "@tabler/icons": "1.84.0",
+        "@tabler/icons": "2.1.2",
         "@types/node": "^18.11.18",
         "@types/prettier": "^2.7.2",
         "prettier": "^2.8.2",

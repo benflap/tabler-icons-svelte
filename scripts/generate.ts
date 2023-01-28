@@ -60,6 +60,9 @@ function createComponentName(originalName: string) {
             // A digit at the beginning of component name is not allowed
             .replace(/^2fa/, "TwoFA")
             .replace(/^3d/, "ThreeD")
+            .replace(/^123/, "OneTwoThree")
+            .replace(/^360/, "ThreeSixty")
+            .replace(/^24/, "TwentyFour")
     );
 }
 
